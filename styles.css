@@ -20,7 +20,7 @@
 
 
   /* --second-color: hsl(var(--hue-color), 56%, 12%); */
-  --second-color: black;
+  --second-color: #333;
   /* --second-color:#729762; */
 
 
@@ -356,18 +356,12 @@ img {
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
+
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
-  /* ---udate-- */
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  position: relative;
-  width: 100%;
-  bottom: 0; */
+
 
 
 
@@ -985,7 +979,8 @@ section#timeline h1 {
 .timeline-img {
   width: 300px;
   height: 210px;
-  background-color: #007bff;
+  background-color: #ccd4dd;
+  
   background-size: cover;
   background-position: center;
   border-radius: 10%;
