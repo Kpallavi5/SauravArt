@@ -1,9 +1,6 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap');
-
-
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -14,9 +11,7 @@
   --hue-color: 224;
   /* --first-color: hsl(var(--hue-color), 89%, 60%); */
   /* --first-color: #7B3F00; */
-  /* --first-color: #658147; */
   --first-color: #A43820;
-
 
 
   /* --second-color: hsl(var(--hue-color), 56%, 12%); */
@@ -25,9 +20,9 @@
 
 
   /*===== Fuente y tipografia =====*/
-  /* --body-font: "Poppins", sans-serif; */
+ 
   --body-font: "Montserrat Alternates", sans-serif;
-    /* --body-font:  "Playwrite IS", cursive; */
+
   /* font-family: "Montserrat Alternates", sans-serif; */
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
@@ -70,7 +65,6 @@ body {
   color: var(--second-color);
   /* color: #e68609; */
   /* background:  #E7D7C2; */
-  /* background: #E7F0DC; */
   background: #F1D3B2;
   /* background: white; */
 }
@@ -96,6 +90,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 15px;
 }
 
 /*===== CLASS CSS ===== */
@@ -156,7 +151,6 @@ img {
   z-index: var(--z-fixed);
   /* background-color: #fff; */
   /* background-color: #ffec9c; */
-  /* background-color: #729762; */
   background-color: #46211A;
 
 
@@ -192,13 +186,13 @@ img {
 
 .nav__link {
   position: relative;
-  /* color: #fff; */
   color: #A43820;
   font-weight: 600;
 }
 
 .nav__link:hover {
   position: relative;
+  
 }
 
 .nav__link:hover::after {
@@ -329,7 +323,6 @@ img {
   border-radius: 1rem;
 }
 
-/* ===== SKILLS =====*/
 
 
 /* ===== CONTACT =====*/
@@ -356,12 +349,18 @@ img {
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
-
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
-
+  /* ---udate-- */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0; */
 
 
 
@@ -553,7 +552,7 @@ button:focus {
 
 @media (max-width: 576px) {
   .slider-container {
-    height: 50vh;
+    height: 35vh;
   }
 
   .left-slide,
@@ -763,189 +762,11 @@ button:focus {
   }
 }
 
-/* -----------slider------------ */
-.slider {
-  height: 100vh;
-  /* margin-top: -50px; */
-  position: relative;
-}
-
-.slider .list .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: .5s;
-  max-width: 100%;
-  /* add this */
-  max-height: 100vh;
-  /* add this */
-
-}
-
-.slider .list .item img {
-  /* width: 100%;
-  height: 100%; */
-  width: 100vw;
-  /* use viewport width */
-  height: 100vh;
-  /* use viewport height */
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100vh;
-}
-
-.slider .list .item::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient(to top, #0000006d 40%, transparent);
-}
-
-.slider .list .item .content {
-  position: absolute;
-  left: 10%;
-  top: 20%;
-  width: 500px;
-  max-width: 80%;
-  z-index: 1;
-}
-
-.slider .list .item .content p:nth-child(1) {
-  text-transform: uppercase;
-  letter-spacing: 10px;
-}
-
-.slider .list .item .content h2 {
-  font-size: 70px;
-  margin: 0;
-}
-
-.slider .list .item.active {
-  opacity: 1;
-  z-index: 10;
-}
-
-@keyframes showContent {
-  to {
-    transform: translateY(0);
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-.slider .list .item.active p:nth-child(1),
-.slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3) {
-  transform: translateY(30px);
-  filter: blur(20px);
-  opacity: 0;
-  animation: showContent .5s .7s ease-in-out 1 forwards;
-}
-
-.slider .list .item.active h2 {
-  animation-delay: 1s;
-}
-
-.slider .list .item.active p:nth-child(3) {
-  animation-duration: 1.3s;
-}
-
-.arrows {
-  position: absolute;
-  top: 30%;
-  right: 50px;
-  z-index: 100;
-}
-
-.arrows button {
-  background-color: #eee5;
-  border: none;
-  font-family: monospace;
-  width: 40px;
-  /* height: 40px; */
-  border-radius: 5px;
-  font-size: x-large;
-  color: #eee;
-  transition: .5s;
-}
-
-.arrows button:hover {
-  background-color: #eee;
-  color: black;
-}
-
-.thumbnail {
-  position: absolute;
-  bottom: 50px;
-  z-index: 11;
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  height: 250px;
-  padding: 0 50px;
-  box-sizing: border-box;
-  overflow: auto;
-  justify-content: center;
-}
-
-.thumbnail::-webkit-scrollbar {
-  width: 0;
-}
-
-.thumbnail .item {
-  width: 150px;
-  height: 220px;
-  filter: brightness(.5);
-  transition: .5s;
-  flex-shrink: 0;
-}
-
-.thumbnail .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.thumbnail .item.active {
-  filter: brightness(1.5);
-}
-
-.thumbnail .item .content {
-  position: absolute;
-  inset: auto 10px 10px 10px;
-}
-
-@media screen and (max-width: 678px) {
-  .thumbnail {
-    justify-content: start;
-  }
-
-  .slider .list .item .content h2 {
-    /* font-size: 60px; */
-    font-size: 35px;
-
-  }
-
-  .arrows {
-    top: 10%;
-  }
-
-  .slider.list.item img {
-    width: 50vw;
-    /* adjust the width for smaller screens */
-    height: 50vh;
-    /* adjust the height for smaller screens */
-  }
-}
 
 /* ---------------timeline ecperience--------- */
 section#timeline {
   padding: 20px;
+  
   text-align: center;
 }
 
@@ -978,9 +799,10 @@ section#timeline h1 {
 
 .timeline-img {
   width: 300px;
-  height: 210px;
+  height: 400px;
+
   background-color: #ccd4dd;
-  
+  ;
   background-size: cover;
   background-position: center;
   border-radius: 10%;
@@ -991,7 +813,7 @@ section#timeline h1 {
 .timeline-content {
   /* width: 250px;
   height: 150px; */
-  max-width: 600px;
+  max-width: 370px;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -1074,42 +896,3 @@ section#timeline h1 {
   width: 100%;
   bottom: 0;
 } */
-
-/* -----------------cARDS-------------- */
-
-
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {
-  margin: 0 -5px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
