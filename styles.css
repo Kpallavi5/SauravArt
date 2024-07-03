@@ -20,7 +20,7 @@
 
 
   /*===== Fuente y tipografia =====*/
- 
+
   --body-font: "Montserrat Alternates", sans-serif;
 
   /* font-family: "Montserrat Alternates", sans-serif; */
@@ -96,7 +96,7 @@ img {
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
   /* font-size: var(--h2-font-size); */
   /* color: var(--first-color); */
@@ -153,7 +153,8 @@ img {
   /* background-color: #ffec9c; */
   background-color: #46211A;
 
-
+  /* background: rgba(141, 123, 123, 0.343); */
+  /* backdrop-filter: blur(10px); */
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -175,6 +176,7 @@ img {
     height: 100%;
     padding: 2rem;
     backdrop-filter: blur(12px);
+    background: rgba(141, 123, 123, 34%);
     /* background-color: var(--second-color); */
     transition: 0.5s;
   }
@@ -192,7 +194,7 @@ img {
 
 .nav__link:hover {
   position: relative;
-  
+
 }
 
 .nav__link:hover::after {
@@ -214,7 +216,8 @@ img {
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  /* color: var(--second-color); */
+  color: whitesmoke;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -227,7 +230,8 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
+  background-color: whitesmoke;
 }
 
 /*=== Show menu ===*/
@@ -348,7 +352,12 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  /* background-color: var(--second-color); */
+  background-image: linear-gradient(rgba(31, 32, 35, 0), rgba(75, 78, 90, 0.7)), url(Images/header.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
@@ -642,6 +651,7 @@ button:focus {
   }
 
   .section-title {
+    margin-top: 3rem;
     margin-bottom: var(--mb-6);
   }
 
@@ -766,7 +776,7 @@ button:focus {
 /* ---------------timeline ecperience--------- */
 section#timeline {
   padding: 20px;
-  
+
   text-align: center;
 }
 
@@ -896,3 +906,87 @@ section#timeline h1 {
   width: 100%;
   bottom: 0;
 } */
+/* -------------------------------------------exhibitions page--------------------------- */
+.sub-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(75, 78, 90, 0.7)), url(Images/header.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff1f1;
+
+
+}
+
+/* .sub-header h1{
+  margin-top: 100px;
+} */
+/* .row{
+  display: flex;
+}
+.exhibition{
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.exhibition-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+  
+
+}
+.exhibition-col img{
+  width: 100%;
+}
+.exhibition-col h1{
+  padding-top: 0;
+}
+
+.exhibition-col p{
+  padding: 15px 0 25px;
+} */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /* Ensure flex items wrap */
+}
+
+.exhibition {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.exhibition-col {
+  flex: 1;
+  /* Allow columns to grow and shrink */
+  padding: 30px 2px;
+  box-sizing: border-box;
+  /* Include padding in the width */
+  max-width: 48%;
+  /* Limit width for larger screens */
+}
+
+.exhibition-col img {
+  width: 400px;
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.exhibition-col h1 {
+  padding-top: 0;
+}
+
+.exhibition-col p {
+  padding: 15px 0 25px;
+}
+
+@media (max-width: 768px) {
+  .exhibition-col {
+    max-width: 100%;
+    /* Full width on smaller screens */
+  }
+}
